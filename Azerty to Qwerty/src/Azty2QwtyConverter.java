@@ -13,7 +13,8 @@ public class Azty2QwtyConverter {
 		arr = new char[arraySize];
 		fillTable();
 	}
-
+	
+	//Add key value pair to array
 	private void addConverts(char azrty, char qwrty) {
 		int hash = hashFunction(azrty);
 		if (arr[hash] == '\u0000') {
@@ -23,7 +24,8 @@ public class Azty2QwtyConverter {
 			System.out.println("THIS IS BAD HASH - CHANGE");
 		}
 	}
-
+	
+	//Returns the index in which the value will be stored
 	private int hashFunction(char key){
 		String hex = Integer.toHexString(key | 0x1000).substring(1);
 		int digits = hex.length();
@@ -33,7 +35,8 @@ public class Azty2QwtyConverter {
 		}
 		return decimal % arraySize;
 	}
-
+	
+	//Fills out converter table according to the conversion text file
 	private void fillTable() {
 		Scanner sc;
 		try {
@@ -50,6 +53,7 @@ public class Azty2QwtyConverter {
 		}
 	}
 
+	//Converts an azerty char input into its qwerty equivalent
 	public char convert2Qwty(char c) {
 		int hash = hashFunction(c);
 		char output = arr[hash];

@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Scanner;
 
+//Test out Azty2QwtyConverter class by taking input from one text file and outputting to another text file
 public class Azty2QwtyTest {
 	public static void main(String[] args) {
 		File f1 = new File("azertyInput.txt");
