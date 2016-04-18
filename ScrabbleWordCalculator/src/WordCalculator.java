@@ -1,7 +1,9 @@
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
-
+/*
+ * Takes in a text file and returns the highest scoring Scrabble word
+ */
 public class WordCalculator {
 	private static int[] arr = {1, 3, 3, 2, 1, 4, 2, 4, 1, 8,
 	                     5, 1, 3, 1, 1, 3, 10, 1, 1, 1, 
